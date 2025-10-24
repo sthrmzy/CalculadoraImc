@@ -34,17 +34,7 @@ A interface é limpa e intuitiva, com um estado inicial claro e um feedback visu
     * Estilos customizados para o efeito *glassmorphism* e fundo
 * **JavaScript (ES6+)** (DOM Manipulation e validação)
 
-## Como Usar
 
-Este é um projeto *front-end* estático. Não é necessário nenhum *build* ou instalação de dependências.
-
-1.  Clone o repositório:
-    ```bash
-    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
-    ```
-2.  Navegue até a pasta do projeto:
-    ```bash
-    cd nome-do-repositorio
     ```
 3.  Abra o arquivo `index.html` no seu navegador de preferência.
 
