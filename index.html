@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC Moderna</title>
+    
+    <!-- 1. Carrega o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Carrega uma fonte moderna (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="min-h-screen text-white grid place-items-center p-4">
+
+    <!-- 
+      O container principal. 
+      Usa a classe 'glass-card' e utilitários do Tailwind.
+    -->
+    <main class="glass-card w-full max-w-md p-8 rounded-2xl">
+        
+        <h1 class="text-3xl font-bold text-center mb-6">Calculadora de IMC</h1>
+        
+        <!-- 
+          Formulário para entrada de dados.
+          'space-y-6' adiciona espaço vertical entre os filhos.
+        -->
+        <form id="imc-form" class="space-y-6">
+            
+            <!-- Grupo de Input: Nome -->
+            <div>
+                <label for="nome" class="block text-sm font-medium mb-2 text-white/80">Nome</label>
+                <input type_="" id="nome" required 
+                       class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/50 transition-all duration-300">
+            </div>
+            
+            <!-- Grupo de Input: Altura -->
+            <div>
+                <label for="altura" class="block text-sm font-medium mb-2 text-white/80">Altura (m)</label>
+                <input type="text" id="altura" inputmode="decimal" placeholder="Ex: 1.75" required
+                       class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/50 transition-all duration-300">
+            </div>
+            
+            <!-- Grupo de Input: Peso -->
+            <div>
+                <label for="peso" class="block text-sm font-medium mb-2 text-white/80">Peso (kg)</label>
+                <input type="text" id="peso" inputmode="decimal" placeholder="Ex: 70.5" required
+                       class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/50 transition-all duration-300">
+            </div>
+            
+            <!-- Botão de Cálculo -->
+            <button type="submit" 
+                    class="w-full py-3 rounded-lg bg-white text-black font-bold text-lg shadow-lg hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black/20 transition-all duration-300">
+                Calcular
+            </button>
+        </form>
+
+        <!-- 
+          Área de Resultado Dinâmica.
+          É muito mais moderna que a caixa de texto que aparecia antes.
+        -->
+        <div id="result-container" class="mt-6 p-6 rounded-lg bg-black/20 min-h-[140px] text-center flex flex-col items-center justify-center transition-all duration-300 ease-in-out">
+            
+            <!-- Estado Inicial: Placeholder -->
+            <div id="result-placeholder" class="">
+                <span class="text-lg text-white/60">Insira seus dados para ver o resultado.</span>
+            </div>
+            
+            <!-- Estado de Sucesso: Dados (escondido por padrão) -->
+            <div id="result-data" class="hidden">
+                 <span class="block text-base uppercase tracking-wide text-white/70" id="result-name"></span>
+                 <span class="block text-5xl font-extrabold mt-2" id="result-imc"></span>
+                 <span class="block text-xl font-medium mt-2" id="result-classification"></span>
+            </div>
+
+             <!-- Estado de Erro (escondido por padrão) -->
+             <div id="result-error" class="hidden">
+                <span class="text-lg font-medium text-red-400" id="error-message"></span>
+             </div>
+        </div>
+
+    </main>
+
+    
+    <!-- 4. JavaScript para a lógica da calculadora -->
+    <script src="js/script.js"></script>
+</body>
+</html>

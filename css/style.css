@@ -1,0 +1,28 @@
+body {
+            /* Usando a mesma imagem de fundo do seu repositório original.
+              Se preferir usar o arquivo local, troque para: url('img/background.jpg') 
+            */
+            background-image: url('../src/pexels-eberhardgross-1367192.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* O fundo não rola com a página */
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Classe customizada para o efeito de "vidro" (Glassmorphism)
+          que você usou no seu CSS original.
+        */
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* Remove as setas de inputs do tipo 'number' (do seu CSS original) */
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
